@@ -1,0 +1,86 @@
+/* colorscheme */
+@define-color background rgba(34, 34, 34, 0.8); 
+@define-color active rgba(68, 68, 68, 0.8);
+@define-color alert rgba(189, 44, 64, 0.8);
+@define-color white rgba(239, 240, 235, 1);
+@define-color darkgrey rgba(73, 73, 73, 1);
+@define-color grey rgba(146, 146, 146, 1);
+
+@define-color red rgba(34, 34, 34, 0.4);
+@define-color yellow rgba(243, 249, 157, 1);
+@define-color green rgba(34, 34, 34, 0.4);
+@define-color blue rgba(34, 34, 34, 0.4);
+@define-color magenta rgba(34, 34, 34, 0.4);
+@define-color cyan rgba(34, 34, 34, 0.4);
+
+
+* {
+    border:        none;
+    border-radius: 0;
+    font-family:   Hack, Sans;
+    font-size:     12px;
+    box-shadow:    none;
+    text-shadow:   none;
+    transition-duration: 0s;
+}
+
+
+window {
+    color:      @white;
+    background: @background;
+}
+
+#workspaces {
+    padding-right: 30px;
+}
+
+#workspaces button {
+    background: transparent;
+    padding:    0 10px;
+    color:   @white;
+    min-width:  20px;
+    border-top: 1px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button.visible {
+    color:      @white;
+}
+#workspaces button.focused {
+    border-top: 1px solid @active;
+    border-bottom: 2px solid @yellow;
+    background: @active;
+}
+#workspaces button.urgent {
+    color:      @alert;
+}
+
+#mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather {
+    margin:     0px 6px 0px 10px;
+    min-width:  25px;
+}
+
+#clock {
+    margin:     0px 16px 0px 10px;
+    min-width:  140px;
+}
+
+#battery.warning {
+   color:       rgba(255, 210, 4, 1);
+}
+
+#battery.critical {
+    color:      rgba(238, 46, 36, 1);
+}
+
+#battery.charging {
+    color:      rgba(217, 216, 216, 1);
+}
+
+#custom-storage.warning {
+    color:      rgba(255, 210, 4, 1);
+}
+
+#custom-storage.critical {
+    color:      rgba(238, 46, 36, 1);
+} 
