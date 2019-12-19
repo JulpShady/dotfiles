@@ -1,8 +1,8 @@
 # Mes dotfiles
 
-Voila la commande ``command``
+Pour configurer mes dotfiles sur une machine
 ```
-command
-command2
-command3
+cd ~
+git clone https://github.com/JulpShady/dotfiles
+stow -d dotfiles -t ~ files
 ```
